@@ -1,0 +1,975 @@
+/* =======================================================
+   VARS E CONFIGURAÇÕES GERAIS 
+   ======================================================= */
+:root {
+    --verde: #3e815f;
+    --terracota: #ec5a41;
+    --bege: #efe2d2;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: "Montserrat", sans-serif;
+    background: linear-gradient(to right, #142d20, var(--verde));
+    background-attachment: fixed;
+}
+
+/* =======================================================
+   ELEMENTOS GLOBAIS / DESTAQUES
+   ======================================================= */
+.destaque-1 {
+    color: var(--terracota);
+}
+
+.destaque-2 {
+    color: var(--terracota);
+    text-shadow: 0 4px 30px black;
+}
+
+.badge-tecnologia {
+    display: inline-block;
+    background-color: var(--verde);
+    color: #efe2d2;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    padding: 6px 16px;
+    border-radius: 50px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* =======================================================
+   BARRA DE NAVEGAÇÃO (NAV-BAR COMPLETA)
+   ======================================================= */
+.nav-bar {
+    position: fixed;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    background-color: rgba(239, 226, 210, 0.95);
+    color: var(--verde);
+    font-weight: bold;
+    border-radius: 12px;
+    z-index: 9999;
+    transition: all 0.3s ease;
+}
+
+/* Classe ativada via JavaScript ao rolar a página */
+.nav-bar.nav-rolando {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    background-color: #efe2d2;
+}
+
+.logo {
+    margin-left: 20px;
+    font-size: 40px;
+    text-align: center;
+}
+
+.menu {
+    margin-top: 10px;
+    margin-right: 20px;
+}
+
+.meu-link {
+    font-size: 20px;
+    text-decoration: none;
+    margin-left: 10px;
+    color: #3e815f;
+}
+
+.menu-hamburguer {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+}
+
+.menu-hamburguer span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: var(--verde);
+    border-radius: 3px;
+    transition: 0.3s ease;
+}
+
+/* =======================================================
+   SEÇÃO: SOBRE MIM
+   ======================================================= */
+.secao-sobre {
+    padding: 80px 5%;
+    color: var(--bege);
+}
+
+.container-sobre {
+    max-width: 1100px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.sobre-foto img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 5px solid var(--bege);
+    object-fit: cover;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+}
+
+.sobre-texto-principal h2 {
+    font-size: 45px;
+    color: var(--bege);
+    margin-top: 10px;
+}
+
+.paragrafo-sobre {
+    font-size: 25px;
+    line-height: 1.6;
+    max-width: 800px;
+    margin: 20px auto;
+    opacity: 0.9;
+}
+
+.pilares-raquel {
+    display: flex;
+    gap: 25px;
+    margin: 50px 0;
+}
+
+.pilar-card {
+    background-color: var(--bege);
+    color: var(--verde);
+    flex: 1;
+    padding: 30px 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border-bottom: 5px solid var(--terracota);
+    transition: transform 0.3s;
+}
+
+.pilar-card:hover {
+    transform: translateY(-8px);
+}
+
+.pilar-icone {
+    font-size: 35px;
+    display: block;
+    margin-bottom: 15px;
+}
+
+.pilar-card h3 {
+    font-size: 22px;
+    margin: 0 0 10px 0;
+    color: var(--verde);
+}
+
+.pilar-card p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin: 0;
+}
+
+.frase-impacto {
+    margin-top: 60px;
+    border-left: 4px solid var(--terracota);
+    padding-left: 20px;
+    display: inline-block;
+    max-width: 700px;
+    text-align: left;
+}
+
+.frase-impacto blockquote {
+    font-size: 24px;
+    font-style: italic;
+    margin: 0 0 10px 0;
+}
+
+.frase-impacto cite {
+    font-size: 16px;
+    font-weight: bold;
+    color: var(--terracota);
+    display: block;
+}
+
+/* =======================================================
+   SEÇÃO: CLASSE DE VÍDEO
+   ======================================================= */
+.secao-video {
+    padding: 20px;
+    background-color: rgba(239, 226, 210, 1.0);
+    margin: 20px 40px 30px 40px;
+    border-radius: 30px;
+}
+
+.secao-video h2 {
+    text-align: center;
+    font-size: 54px;
+    color: var(--verde);
+    margin: 20px 0 20px 0;
+}
+
+.secao-video p {
+    text-align: center;
+    font-size: 30px;
+    color: var(--verde);
+    margin-bottom: 30px;
+}
+
+.container-flex-video {
+    display: flex;
+    gap: 50px;
+    max-width: 1200px;
+    font-size: 30px;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.coluna-texto {
+    flex: 1;
+    color: var(--verde);
+}
+
+.player-video {
+    background: #3e815f;
+    position: relative;
+    border-radius: 30px;
+    border: 8px solid var(--verde);
+    overflow: hidden;
+}
+
+.player-video iframe {
+    border: none;
+    top: 0;
+    left: 0;
+    width: 500px;
+    height: 300px;
+    border-radius: 30px;
+}
+
+.container-botao {
+    text-align: center;
+    width: 100%;
+    margin-top: 50px;
+    display: block;
+}
+
+.btn-cta-2 {
+    padding: 15px 40px;
+    background-color: #ec5a41;
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 8px 15px black;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: none;
+}
+
+.btn-cta-2:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.4);
+    background-color: #f06a53;
+}
+
+/* =======================================================
+   SEÇÃO: INTELIGÊNCIA ARTIFICIAL (IA)
+   ======================================================= */
+.secao-ia {
+    position: relative;
+    padding: 100px 5%;
+    color: var(--verde);
+    text-align: center;
+    border-radius: 30px;
+    background-color: transparent;
+}
+
+.container-ia {
+    position: relative;
+    max-width: 950px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.cabecalho-ia {
+    background-color: #efe2d2;
+    border-radius: 20px;
+    color: var(--verde);
+    padding: 10px 10px;
+    margin-bottom: 30px;
+    border: 2px solid rgba(236, 90, 65, 0.3);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 0 0 20px rgba(236, 90, 65, 0.1);
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.cabecalho-ia:hover {
+    transform: translateY(-3px);
+    border-color: #ec5a41;
+    box-shadow: 0 30px 35px rgba(0, 0, 0, 0.2), 0 0 25px rgba(236, 90, 65, 0.3);
+}
+
+.cabecalho-ia h2 {
+    font-size: 38px;
+    font-weight: 900;
+    margin-top: 0;
+    margin-bottom: 15px;
+    line-height: 1.2;
+}
+
+.destaque-ia {
+    color: #ec5a41;
+}
+
+.cabecalho-ia p {
+    padding: 10px;
+    font-size: 20px;
+    line-height: 1.6;
+    margin: 0px 20px 30px 20px;
+    opacity: 0.9;
+    font-weight: bold;
+}
+
+.card-interativo-ia {
+    background-color: #efe2d2;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    text-align: left;
+    color: #3e815f;
+}
+
+.progresso {
+    padding: 7px;
+    background: #ffffff;
+    font-weight: bold;
+    color: #ec5a41;
+    text-transform: uppercase;
+    font-size: 13px;
+    border-radius: 50px;
+}
+
+.pergunta-corpo h3 {
+    font-size: 24px;
+    font-weight: 800;
+    margin: 15px 0 30px 0;
+    line-height: 1.3;
+}
+
+.opcoes-respostas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn-opcao {
+    background-color: transparent;
+    border: 2px solid #3e815f;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #3e815f;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-opcao:hover {
+    background-color: #3e815f;
+    color: #efe2d2;
+    transform: translateX(10px);
+    box-shadow: 5px 5px 15px #ec5a41;
+}
+
+/* =======================================================
+   SEÇÃO: CARDS VANTAGENS
+   ======================================================= */
+.secao-cards {
+    padding: 60px 5%;
+    text-align: center;
+}
+
+.titulo-cards {
+    font-size: 40px;
+    color: var(--bege);
+    margin-bottom: 40px;
+}
+
+.container-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.card-item {
+    background-color: #efe2d2;
+    color: var(--verde);
+    flex: 1;
+    min-width: 280px;
+    max-width: 350px;
+    padding: 35px 25px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(236, 90, 65, 0.1);
+    transition: all 0.3s ease;
+    text-align: left;
+}
+
+.card-item:hover {
+    transform: translateY(-10px);
+    border-color: #ec5a41;
+    box-shadow: 0 15px 30px rgba(236, 90, 65, 0.25);
+}
+
+.icone-card {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.card-item h3 {
+    font-size: 22px;
+    font-weight: 800;
+    margin: 0 0 15px 0;
+    color: var(--verde);
+}
+
+.card-item p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin: 0;
+    opacity: 0.9;
+}
+
+/* =======================================================
+   SEÇÃO: DEPOIMENTOS / FEEDBACK
+   ======================================================= */
+.secao-feedback {
+    padding: 60px 5%;
+    background-color: rgba(239, 226, 210, 0.05);
+    text-align: center;
+}
+
+.secao-feedback h2 {
+    font-size: 40px;
+    color: var(--bege);
+    margin-bottom: 10px;
+}
+
+.subtitulo-feedback {
+    font-size: 18px;
+    color: var(--bege);
+    opacity: 0.8;
+    margin-bottom: 40px;
+}
+
+.container-feedback {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.card-feedback {
+    background-color: #ffffff;
+    color: #333333;
+    flex: 1;
+    min-width: 300px;
+    max-width: 360px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    text-align: left;
+    position: relative;
+    border-bottom: 4px solid var(--terracota);
+}
+
+.topo-feedback {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.foto-aluno {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--verde);
+}
+
+.dados-aluno h4 {
+    margin: 0;
+    font-size: 18px;
+    color: var(--verde);
+    font-weight: 700;
+}
+
+.dados-aluno span {
+    font-size: 13px;
+    color: #777777;
+    display: block;
+    margin-top: 2px;
+}
+
+.aspas {
+    position: absolute;
+    right: 0;
+    top: -10px;
+    font-size: 60px;
+    color: rgba(236, 90, 65, 0.15);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+
+.estrelas {
+    font-size: 14px;
+    margin-bottom: 15px;
+    letter-spacing: 2px;
+}
+
+.texto-feedback {
+    font-size: 15px;
+    line-height: 1.6;
+    color: #555555;
+    font-style: italic;
+    margin: 0;
+}
+
+/* =======================================================
+   RODAPÉ / FOOTER
+   ======================================================= */
+.rodape {
+    background-color: var(--bege);
+    color: var(--verde);
+    padding: 60px 5% 20px 5%;
+    margin-top: 80px;
+    border-radius: 30px 30px 0 0;
+}
+
+.container-rodape {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.coluna-rodape {
+    flex: 1;
+    min-width: 250px;
+}
+
+.logo-rodape {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.sobre-projeto p {
+    font-size: 15px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.coluna-rodape h3 {
+    font-size: 20px;
+    font-weight: 800;
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: var(--verde);
+}
+
+.links-uteis ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-uteis ul li {
+    margin-bottom: 10px;
+}
+
+.links-uteis ul li a {
+    text-decoration: none;
+    color: var(--verde);
+    font-size: 16px;
+    transition: all 0.3s;
+}
+
+.links-uteis ul li a:hover {
+    color: var(--terracota);
+    padding-left: 5px;
+}
+
+.contato-redes p {
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.icones-redes {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.icones-redes a {
+    text-decoration: none;
+    background-color: var(--verde);
+    color: var(--bege);
+    padding: 8px 15px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.icones-redes a:hover {
+    background-color: var(--terracota);
+    transform: translateY(-3px);
+}
+
+.direitos-autorais {
+    text-align: center;
+    border-top: 1px solid rgba(62, 129, 95, 0.2);
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+.direitos-autorais p {
+    margin: 0;
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+/* =======================================================
+   BOTÃO FLUTUANTE NOTION WITH PULSE ANIMS
+   ======================================================= */
+.btn-flutuante-notion {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 10000;
+    background-color: var(--terracota);
+    color: #ffffff;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    animation: pulsar 2s infinite;
+    transition: all 0.3s ease;
+}
+
+.btn-flutuante-notion:hover {
+    background-color: #d44b34;
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(236, 90, 65, 0.5);
+    animation: none;
+}
+
+.icone-agenda {
+    font-size: 20px;
+}
+
+@keyframes pulsar {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+    50% {
+        transform: scale(1.04);
+        box-shadow: 0 8px 30px rgba(236, 90, 65, 0.6);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    }
+}
+
+/* =======================================================
+   --- REGRAS UNIFICADAS APENAS PARA O CELULAR (MAX-WIDTH: 768px) ---
+   ======================================================= */
+@media (max-width: 768px) {
+    html, body {
+        width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Transformação Flexbox: Colunas no Celular */
+    .container-cards,
+    .container-feedback,
+    .container-rodape,
+    .hero {
+        flex-direction: column !important;
+        align-items: center !important;
+        text-align: center !important;
+        gap: 30px !important;
+        padding: 30px 20px !important;
+    }
+
+    /* Centralização e Respiro Geral das Seções */
+    section,
+    .hero,
+    .secao-sobre,
+    .secao-feedback,
+    .rodape {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Ajuste Exclusivo da Nav-Bar no Celular */
+    .nav-bar {
+        position: fixed !important;
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        padding: 10px 20px !important; /* Voltou para o padding elegante de respiro */
+        left: 0 !important;
+        right: 0 !important;
+        transform: none !important;
+        width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        font-size: 16px !important; /* Fonte legível ajustada */
+        white-space: nowrap !important;
+        font-weight: 800;
+        border-radius: 0 !important;
+    }
+
+    .logo {
+        font-size: 30px !important;
+        margin-left: 0 !important;
+    }
+
+    .menu-hamburguer {
+        display: flex !important; 
+        padding: 5px !important;
+        margin-top: 0 !important;
+    }
+
+    /* Como a lista de links deve se comportar no celular: */
+    .menu {
+        display: none; 
+        flex-direction: column;
+        position: absolute; 
+        top: 100%; 
+        left: 0;
+        width: 100%;
+        background-color: #efe2d2; 
+        text-align: center;
+        padding: 20px 0;
+        gap: 20px;
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    }
+
+    /* QUANDO O JAVASCRIPT ATIVAR O MENU: Ele muda para flex e aparece! */
+    .menu.ativo {
+        display: flex !important;
+    }
+
+    /* Ajuste para os links ficarem um embaixo do outro e com espaço para clicar */
+    .meu-link {
+        font-size: 20px !important;
+        margin: 0 !important;
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+    }
+    
+    /* Ajustes da Seção Sobre e Pilares */
+    .hero {
+        margin-top: 80px !important;
+    }
+
+    .hero-content {
+        font-size: 20px !important;
+        text-align: center !important;
+    }
+
+    .hero-content p {
+        margin: 20px 0 !important;
+        line-height: 1.4 !important;
+    }
+
+    .hero-image img {
+        margin-left: 0 !important;
+        width: 280px !important;
+        height: 280px !important;
+    }
+
+    .hero-content,
+    .sobre-texto-principal,
+    .container-ia {
+        width: 100% !important;
+        margin: 0 auto !important;
+        text-align: center !important;
+    }
+
+    .pilares-raquel {
+        display: flex !important;
+        flex-direction: column !important;
+        gap: 20px !important;
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 30px 0 !important;
+    }
+
+    /* Correção Fina da Seção do Vídeo */
+    .secao-video {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 40px 0 !important;
+        padding: 0 20px !important;
+        box-sizing: border-box !important;
+        text-align: center !important;
+    }
+
+    .container-flex-video {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 auto !important;
+        padding: 0 !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+        font-size: 18px !important;
+    }
+
+    .coluna-texto,
+    .secao-video h2,
+    .secao-video p {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+        padding: 0 !important;
+    }
+
+    .player-video {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 20px auto 0 auto !important;
+        clear: both !important;
+        display: block !important;
+    }
+
+    .player-video iframe {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: block !important;
+        left: 0 !important;
+        height: 220px !important;
+        position: relative !important;
+        margin: 0 auto !important;
+    }
+
+    /* Correção do Tamanho do Botão de Nível */
+    .btn-nivel,
+    .botao-espanhol,
+    .secao-video .btn,
+    .btn-cta-2 {
+        display: inline-block !important;
+        width: auto !important;
+        max-width: 280px !important;
+        font-size: 15px !important;
+        padding: 12px 24px !important;
+        margin: 20px auto !important;
+        text-align: center !important;
+    }
+
+    /* Ajustes das Caixas de IA e Interativas */
+    .cabecalho-ia h2 {
+        font-size: 24px !important;
+    }
+
+    .cabecalho-ia p {
+        font-size: 16px !important;
+        margin: 0px 10px 20px 10px !important;
+    }
+
+    .card-interativo-ia {
+        padding: 20px !important;
+    }
+
+    .card-item,
+    .card-feedback {
+        max-width: 100% !important;
+        width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Redução do Botão Flutuante do Notion no Celular */
+    .btn-flutuante-notion {
+        bottom: 20px !important;
+        right: 20px !important;
+        padding: 10px 18px !important;
+        font-size: 14px !important;
+    }
+
+    .icone-agenda {
+        font-size: 16px !important;
+    }
+}
+/* Se tiver a imagem das marcas d'água, descomente a linha abaixo */
+/* background-image: url('fundo-raquel.png'); background-repeat: repeat; background-attachment: fixed; */
+/*@import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght,XOPQ,XTRA,YOPQ,YTDE,YTFI,YTLC,YTUC@8..144,100..1000,96,468,79,-203,738,514,712&display=swap');
+    /color: blue;  /*cor do texto/
+/font-size: 30px; /*tamanho do texto/
+/font-weight: 400; /*espessura do texto/
+/font-family: " Roboto Flex", sans-serif;/*endereço da fonte do texto/
+/font-style: italic; /*estilo da fonte do texto/
+/* /espaçco das linhas do texto/
+/letter-spacing: 50px; /*espaço das letras do texto/
+/word-spacing: 10pxline-height: 30px;; /*espaço das palavra do texto/
+/text-align: center; /*Alinhamento do texto/
+/text-transform: capitalize; /*transformarção do texto/
+/*text-decoration: underline; /*decoração do texto
+    /*text-shadow 
+    <a href="">Sobre Mim</a>
+            <a href="">Feedback</a>
+            <a h 30px; espaço de dentro pra fora para baixo
+    padding-right: 10px; espaço de dentro pra fora a direita
+    padding-left: 5px; espaço de dentro pra fora a esquerda/*
