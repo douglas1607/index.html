@@ -740,7 +740,7 @@ body {
       .secao-apresentacao {
         padding-left: 0 !important;  /* Remove o espaço da esquerda da seção */
         padding-right: 0 !important; /* Remove o espaço da direita da seção */
-        padding-top: 5px !important; /* Ajuste para o celular: menor que no PC para colar na barra */
+        padding-top: 10px !important; /* Ajuste para o celular: menor que no PC para colar na barra */
     }
 
     .container-apresentacao {
