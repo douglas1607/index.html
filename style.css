@@ -49,14 +49,13 @@ body {
    ======================================================= */
 .nav-bar {
     position: fixed;
-    top: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 5px;
+    padding: 0;
     background-color: rgba(239, 226, 210, 0.95);
     color: var(--verde);
     font-weight: bold;
@@ -111,41 +110,35 @@ body {
 /* =======================================================
    SEÇÃO: SOBRE MIM
    ======================================================= */
-.secao-sobre {
-    padding: 80px 5%;
-    color: var(--bege);
+/* --- AJUSTE FINO DA SEÇÃO DE APRESENTAÇÃO --- */
+.secao-apresentacao {
+    width: 100%;
+    background-color:transparent; /* Mantém o bege de fundo da Raquel */
+    
+    /* Espaço no TOPO: Garante que fique logo abaixo da navbar sem grudar */
+    padding-top: 30px; 
+    
+    /* Espaço na PARTE DE BAIXO: Diminuído para não ficar muito distante da próxima seção */
+    padding-bottom: 0px; 
+    
+    overflow: hidden;
 }
 
-.container-sobre {
-    max-width: 1100px;
-    margin: 0 auto;
-    text-align: center;
+.container-apresentacao {
+    /* O segredo dos 20px nas laterais: */
+    /* Usamos calc(100% - 40px) para descontar 20px da esquerda e 20px da direita */
+    width: calc(100% - 40px); 
+    
+    /* Centraliza a caixa na tela */
+    margin: 0 auto; 
 }
 
-.sobre-foto img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid var(--bege);
-    object-fit: cover;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-    margin-bottom: 25px;
+.container-apresentacao img {
+    width: 100%;       /* Ocupa todo o espaço do container (já com os descontos) */
+    height: auto;      /* Mantém a proporção sem distorcer a arte */
+    display: block;    /* Remove espaços em branco fantasmas abaixo */
+    border-radius: 15px; /* Opcional: deixa as bordinhas da foto levemente arredondadas se quiser combinar com o site */
 }
-
-.sobre-texto-principal h2 {
-    font-size: 45px;
-    color: var(--bege);
-    margin-top: 10px;
-}
-
-.paragrafo-sobre {
-    font-size: 25px;
-    line-height: 1.6;
-    max-width: 800px;
-    margin: 20px auto;
-    opacity: 0.9;
-}
-
 .pilares-raquel {
     display: flex;
     gap: 25px;
@@ -213,7 +206,7 @@ body {
 .secao-video {
     padding: 20px;
     background-color: rgba(239, 226, 210, 1.0);
-    margin: 20px 40px 30px 40px;
+    margin: 20px 20px 30px 20px;
     border-radius: 30px;
 }
 
@@ -718,11 +711,33 @@ body {
         box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
     }
 }
+/* =======================================================
+   MÁGICA DE VISIBILIDADE (COMPUTADOR VS CELULAR)
+   ======================================================= */
+
+/* 1. CONFIGURAÇÃO PADRÃO (Para telas grandes de Computador) */
+.arte-desktop {
+    display: block !important; /* Força aparecer no PC */
+}
+
+.arte-mobile {
+    display: none !important;  /* Força sumir no PC */
+}
 
 /* =======================================================
    --- REGRAS UNIFICADAS APENAS PARA O CELULAR (MAX-WIDTH: 768px) ---
    ======================================================= */
 @media (max-width: 768px) {
+    
+    /* CORREÇÃO DO BUG: Força o esconde-esconde a funcionar no celular */
+    .arte-desktop {
+        display: none !important; /* Some no celular */
+    }
+
+    .arte-mobile {
+        display: block !important; /* Aparece no celular */
+    }
+
     html, body {
         width: 100% !important;
         overflow-x: hidden !important;
@@ -763,17 +778,18 @@ body {
         flex-direction: row !important;
         justify-content: space-between !important;
         align-items: center !important;
-        padding: 10px 20px !important; /* Voltou para o padding elegante de respiro */
+        padding: 10px 20px !important;
         left: 0 !important;
         right: 0 !important;
         transform: none !important;
         width: 100% !important;
         margin: 0 !important;
         box-sizing: border-box;
-        font-size: 16px !important; /* Fonte legível ajustada */
+        font-size: 16px !important;
         white-space: nowrap !important;
         font-weight: 800;
         border-radius: 0 !important;
+        z-index: 99999 !important; /* Garante que o menu do celular fique na frente de tudo */
     }
 
     .logo {
@@ -802,12 +818,11 @@ body {
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
     }
 
-    /* QUANDO O JAVASCRIPT ATIVAR O MENU: Ele muda para flex e aparece! */
+    /* QUANDO O JAVASCRIPT ATIVAR O MENU */
     .menu.ativo {
         display: flex !important;
     }
 
-    /* Ajuste para os links ficarem um embaixo do outro e com espaço para clicar */
     .meu-link {
         font-size: 20px !important;
         margin: 0 !important;
@@ -815,7 +830,7 @@ body {
         display: block;
         width: 100%;
     }
-    
+     
     /* Ajustes da Seção Sobre e Pilares */
     .hero {
         margin-top: 80px !important;
