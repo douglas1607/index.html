@@ -737,6 +737,20 @@ body {
     .arte-mobile {
         display: block !important; /* Aparece no celular */
     }
+      .secao-apresentacao {
+        padding-left: 0 !important;  /* Remove o espaço da esquerda da seção */
+        padding-right: 0 !important; /* Remove o espaço da direita da seção */
+        padding-top: 5px !important; /* Ajuste para o celular: menor que no PC para colar na barra */
+    }
+
+    .container-apresentacao {
+        width: 100% !important;     /* Força o container a ocupar a tela inteira (100%) */
+        margin: 0 !important;        /* Zera qualquer margem restante */
+    }
+
+    .container-apresentacao img {
+        border-radius: 30px !important; /* Remove o arredondado para a foto colar nas bordas da tela */
+    }
 
     html, body {
         width: 100% !important;
@@ -788,7 +802,7 @@ body {
         font-size: 16px !important;
         white-space: nowrap !important;
         font-weight: 800;
-        border-radius: 0 !important;
+        border-radius:10px !important;
         z-index: 99999 !important; /* Garante que o menu do celular fique na frente de tudo */
     }
 
